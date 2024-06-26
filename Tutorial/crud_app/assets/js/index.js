@@ -18,7 +18,7 @@ $("#update_user").submit(function(event){
     console.log(data)
 
     var request = {
-        'url':`https://nodejs-aiiq.onrender.com/api/users/${data.id}`,
+        'url':`http://nodejs-aiiq.onrender.com/api/users/${data.id}`,
         'method':'PUT',
         'data':data
     }
@@ -32,8 +32,9 @@ if(window.location.pathname == '/'){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
+        console.log(id)
         var request = {
-            'url':`https://nodejs-aiiq.onrender.com/api/users/${id}`,
+            'url':`http://nodejs-aiiq.onrender.com/api/users/${id}`,
             'method':'DELETE'
         }
         
