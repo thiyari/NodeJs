@@ -32,7 +32,6 @@ if(window.location.pathname == '/'){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
-        console.log(id)
         var request = {
             'url':`http://nodejs-aiiq.onrender.com/api/users/${id}`,
             'method':'DELETE'
