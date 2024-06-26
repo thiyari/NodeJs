@@ -18,7 +18,7 @@ $("#update_user").submit(function(event){
     console.log(data)
 
     var request = {
-        'url':`https://ap-south-1.aws.data.mongodb-api.com/app/data-sgnfvsc/endpoint/data/v1/${data.id}`,
+        'url':`https://ap-south-1.aws.data.mongodb-api.com/app/data-sgnfvsc/endpoint/data/v1/action/findOne/${data.id}`,
         'method':'PUT',
         'data':data
     }
@@ -33,7 +33,7 @@ if(window.location.pathname == '/'){
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
         var request = {
-            'url':`https://ap-south-1.aws.data.mongodb-api.com/app/data-sgnfvsc/endpoint/data/v1/${id}`,
+            'url':`https://ap-south-1.aws.data.mongodb-api.com/app/data-sgnfvsc/endpoint/data/v1/action/findOne/${id}`,
             'method':'DELETE'
         }
         
